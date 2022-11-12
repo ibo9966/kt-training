@@ -11,12 +11,16 @@ fun main(){
 
     //println("kotlin".reversed())
 
-    var list = arrayListOf<String>("Kotlin", "Java", "C#", "Javascript")
+   /*
+   var list = arrayListOf<String>("Kotlin", "Java", "C#", "Javascript")
     for (item in list) println(item)
     list.swap(0,3)
 
     println()
     for (item in list) println(item)
+    */
+
+    println("kayatepe ".yusuf())
 }
 
 //fun triple(sayi:Int): Int=sayi * 3
@@ -27,4 +31,6 @@ fun ArrayList<String>.swap(x: Int , y : Int){
     val temp = this[x]
     this[x]=this[y]
     this[y]=temp
+
 }
+fun String.yusuf()=this + "ibo"
