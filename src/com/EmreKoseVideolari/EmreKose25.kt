@@ -16,9 +16,12 @@ fun main(){
 
     var araba=Araba()
     araba.model=2017
+    println("arabanın modeli ${araba.model!!}")
     araba.renk="Beyaz"
+    println("arabanın rengi ${araba.renk!!}")
     araba.calisma()
     araba.hizlanma()
+
 
 }
 class Lamp{
