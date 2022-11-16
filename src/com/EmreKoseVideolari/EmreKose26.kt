@@ -9,7 +9,7 @@ package com.EmreKoseVideolari
 */
 
 fun main() {
-
+/*
 }
 
 class PublicClass{
@@ -41,5 +41,5 @@ class C {
     fun getValue(){
         var a=A()
         //a.b →→ ERİŞİM SAĞLANAMAZ
-    }
+    }*/
 }

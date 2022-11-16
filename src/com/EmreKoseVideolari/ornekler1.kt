@@ -197,7 +197,101 @@ fun main() {
 
     }
 */
+   /* var liste = arrayListOf(1,2,3)
+    liste.add(10)
+    liste.remove(1)
+    liste.add(3, 30)
+    println(liste)*/
+
+
+/*
+    var liste : ArrayList<Int> = arrayListOf(1,2,3,4,5,3,7,6,89,77,64,3,10)
+    liste.removeIf { it < 5 || it >= 10 }
+    println(liste)
+
+
+*/
+   /* var liste : ArrayList<Int> = arrayListOf(6,89,77,64,3,10)
+    var liste2 : ArrayList<Int> = arrayListOf(1,2,3)
+    liste.addAll(2,liste2)
+
+    println(liste)*/
+/*
+    var liste : ArrayList<Any> = arrayListOf(1,2,3)
+
+    println(liste)*/
+
+
+    /*var liste : ArrayList<Int> = arrayListOf(6,89,77,64,3,10)
+    var liste2 : ArrayList<Int> = arrayListOf(1,2,3)
+    liste.addAll(2,liste2)
+
+    println(liste)*/
+
+   /* var st = setOf<Int>(3,5,6,7,6,6,6)
+
+    st.forEach {
+        println(it)
+    }*/
+
+
+    /*var dizi  = arrayOf(4,2,5,2,4,12)
+    dizi.sort()
+    dizi.reverse()
+    */
+
+   /*
+   var dizi : Array<Int?> = arrayOf(1,2,3,4)
+    dizi[2] = null
+    println(dizi[3])
+
+    */
+
+  /*  var st = setOf<Int>(3,5,6,7,6,6,6)
+    st.add(1)
+    st.forEach {
+        println(it)
+    }
+*/
+
+   /* var liste : ArrayList<Int> = arrayListOf(6,89,77,64,3,10)
+
+    liste.forEach {
+
+        println(it)
+        if (it > 10)
+        {
+            return
+        }
+    }*/
+
+
+ /*   val liste  = arrayListOf<Int>(4,2,5,2,4,12)
+    var liste2  = arrayListOf<Int>()
+
+    var sayac = liste2.size
+
+    do {
+        liste2.add(liste.get(sayac))
+        sayac ++
+    }while (liste2.max()!! < 5)
+
+    println(liste2)
+*/
+
+   /* var liste  = arrayListOf<Int>(4,2,5,2,4,12)
+    liste.sort()
+    liste.removeAt(0)
+    liste.reverse()
+    println(liste)*/
+
+/*
+    var dizi = arrayOf(1,2,3,4)
+    dizi[2] = null
+    println(dizi[2])
+*/
 
 }
+
 
 
