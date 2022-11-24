@@ -1,6 +1,7 @@
 package com.EnesPolatVideolari
 
 fun main() {
+    /*
     var dizitamsyi = Array<Int>(5) { 0 }
     dizitamsyi[2] = 45
     println(dizitamsyi[2])
@@ -24,5 +25,35 @@ fun main() {
 
     for (index in 0..3) {
         println("diziStr[$index]:" +diziStr[index])
+    }
+    */
+
+    var grubunYasi=Array<Int>(5) {0}
+    grubunYasi[2]=30
+    grubunYasi[4]=50
+    for (i in grubunYasi){
+        println(i)
+    }
+
+    println("İndeks olarak dizinin elemanları yazdırıyoruz.")
+    for (i in 0..4){
+        println("dizi[$i]:" +grubunYasi[i])
+    }
+
+    var grupUyeleri=Array<String>(5) {""}
+    grupUyeleri[2]="İbrahim"
+    grupUyeleri[4]="Duygu"
+    for (i in grupUyeleri){
+        println(i)
+    }
+    println("İndeks olarak dizinin elemanlarını yazdırıyoruz.")
+    for (i in 0..4){
+        println("dizi[$i]:"+grupUyeleri[i])
+    }
+
+
+    println("Karşılıklı olarak yazalım:")
+    for (i in 0..4){
+        println("dizi[$i]"+grubunYasi[i] + " yaşında olan " +grupUyeleri[i])
     }
 }
