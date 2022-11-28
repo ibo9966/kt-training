@@ -642,11 +642,13 @@ fun fark(n1:Int,n2:Int):Int{
     //Örnek 35: Klavyeden girilen 3 basamaklı sayının 1. 2. ve 3. basamağını
     // (Basamak Değerlerini) yazdıran programın algoritması.
 
-    //---------------------------------------
-    //---------------------------------------
-    //---------------------------------------
-    //---------------------------------------
-    //---------------------------------------
+
+    /*  println("sayi giriniz")
+    val sayi = readLine().toString()
+    repeat(sayi.length) {
+        println(sayi[it])
+    }*/
+
 
     //Örnek 36:  Ekrana 10 defa Adını yazdıran Akış Şeması
 
@@ -794,7 +796,9 @@ fun fark(n1:Int,n2:Int):Int{
 
     //Örnek 40: Girilen 10 adet sayi içerisinden pozitiflerin ve negatiflerin ve “0”  sayısını ayrı ayrı bulan akış şeması.
 
-    /*  for (i in 1..10){
+    /*
+    var sayilar= mutableListOf<Int>()
+     for (i in 1..10){
         println("LÜTFEN SAYI GİRİNİZ:")
         var sayi= readLine()!!.toInt()
         if (sayi>0){
@@ -806,11 +810,10 @@ fun fark(n1:Int,n2:Int):Int{
         else{
             println("$sayi sayısı sıfırdır.")
         }
-        //---------------------------------------------------------
-        //---------------------------------------------------------
-        //---------------------------------------------------------
-        //---------------------------------------------------------
-    }*/
+         sayilar.add(sayi)
+     }
+    println(sayilar)
+    */
 
     //Örnek 41: Kürenin alanını ve hacmini hesaplayan algoritma ve akış şeması örneği.
 
@@ -932,12 +935,27 @@ fun fark(n1:Int,n2:Int):Int{
     //Örnek 50:  Arka arkaya girilen rastgele 10 tamsayının ortalaması ile bu sayılardan
     // en büyük ve en küçük olanının ortalamasını bularak elde edilen bu iki ortalamanın farkını alan algoritma örneği.
 
+    /*
+   var toplam=0
+    var ort=1
+    var sayiKumesi= mutableListOf<Int>()
+    for (i in 1..10){
+        println("Lütfen sayı:")
+        var sayi= readLine()!!.toInt()
+        toplam+=sayi
+        ort=toplam/i
+        sayiKumesi.add(sayi)
+    }
+    println(sayiKumesi)
+    println(ort)
+    var mini=sayiKumesi.min()
+    var maxi =sayiKumesi.max()
+    var avarage= (maxi!!+mini!!)/2
+    println(avarage)
+    var asilOrt=ort-avarage
+    println("İki ortalamanın farkı :$asilOrt ")
+    */
 
-    //---------------------------------------------------------------
-    //---------------------------------------------------------------
-    //---------------------------------------------------------------
-    //---------------------------------------------------------------
-    //---------------------------------------------------------------
 
     //Örnek 51: Öğrencinin sınavdan aldığı puan (0-100) karşılığı olan notu (1-5) ekranda gösteren algoritma örneği.
 
@@ -965,8 +983,334 @@ fun fark(n1:Int,n2:Int):Int{
 
     }
     */
+
+    //Örnek 56: Klavyeden girilen 1-25 arasındaki bir tamsayının faktöriyelini
+    // alan programın algoritma ve akış diyagramını yazınız.
+
+    /*   var result=1
+    println("Lütfen bir sayı giriniz:")
+    var sayi= readLine()!!.toInt()
+    if (sayi>=1 && sayi<=25){
+        for (i in sayi downTo 1) {
+            result *= i
+    }
+        println("$sayi sayısının faktöriyeli : $result 'tur.")
+
+    }
+    else{
+        println("Lütfen 1-25 arasında değer giriniz.")
+    }
+*/
+    //Örnek 57: Klavyeden ardı ardına sayı girişi isteyen ve bu sayı 10 ile 15
+    // arasında olmadığı sürece bu işleme devam eden programın algoritma ve akış diyagramını yazınız.
+
+    /*
+   while (true){
+        println("Lütfen sayı giriniz.10 ile 15 arasında bir değer girince çıkış yapar.")
+        var sayi= readLine()!!.toInt()
+        if (sayi>10 && sayi<15){
+            println("ÇIKIŞ")
+            break
+        }
+
+    }
+    */
+
+    //Örnek 58:  1den 25 e kadar olan sayıların kareleri toplamını
+    // bulan programın algoritma ve akış diyagramını yazınız.
+
+    /*
+    var kare=1
+    var toplam=0
+    for (i in 1..25){
+        println(i)
+        kare=(i*i)
+        toplam+=kare
+    }
+    println("toplam :" +toplam)
+*/
+
+    //Örnek 59: Klavyeden 10 tane tamsayı girilmesini isteyen ve bu girilen
+    // tamsayılardan kaç tanesinin negatif olduğunu bulan programın algoritma ve akış diyagramını yazınız.
+
+    /*var pozitifAdet=0
+    var negatifAdet=0
+    var sifirAdet=0
+    for (i in 1..10){
+        println("Lütfen sayı giriniz:")
+        var sayi= readLine()!!.toInt()
+        if (sayi>0){
+            println("$sayi POZİTİF")
+            pozitifAdet++
+        }
+        else if (sayi<0){
+            println("$sayi NEGATİF")
+            negatifAdet++
+        }
+        else{
+            println("SAYI SIFIRDIR.")
+            sifirAdet++
+        }
+    }
+    println("Pozitif sayıların adeti :$pozitifAdet")
+    println("Negatif sayıların adeti :$negatifAdet")
+    println("SIFIR ADET :$sifirAdet")*/
+
+    //Örnek 61: Klavyeden girilen 1-12 arasındaki tamsayıların hangi aya denk geldiğini bulup ekrana yazan programın
+    //algoritma ve akış diyagramını yazınız.
+
+    /*
+    println("Lütfen 1-12 arasında bir sayı giriniz.")
+    var ay= readLine()!!.toInt()
+    if (ay==1){
+        println("OCAK")
+    }
+    else if (ay==2){
+        println("ŞUBAT")
+    }
+    else if (ay==3){
+        println("MART")
+    }
+    else if (ay==4){
+        println("NİSAN")
+    }
+    else if (ay==5){
+        println("MAYIS")
+    }
+    else if (ay==6){
+        println("HAZİRAN")
+    }
+    else if (ay==7){
+        println("TEMMUZ")
+    }
+    else if (ay==12){
+        println("AĞUSTOS")
+    }
+    else if (ay==9){
+        println("EYLÜL")
+    }
+    else if (ay==10){
+        println("EKİM")
+    }
+    else if (ay==11){
+        println("KASIM")
+    }
+    else if (ay==12){
+        println("ARALIK")
+    }
+    else{
+        println("LÜTFEN 1-12 arası değer giriniz.")
+    }
+    */
+
+    //Örnek 62: Dört işleme birer kod numarası vererek, klavyeden girilen iki sayıyı yine klavyeden girilen işlem koduna
+    // göre toplayan, çıkaran, çarpan veya bölen programın algoritma ve akış diyagramını yazınız.
+
+    /*
+
+    var result=0
+    println("LÜTFEN HESAP MAKİNASINDA YAPMAK İSTEDİĞİNİZ İŞLEMİ SEÇİNİZ:")
+    println("1->TOPLAMA")
+    println("2->ÇIKARMA")
+    println("3->ÇARPMA")
+    println("4->BÖLME")
+    var secim= readLine()!!.toInt()
+    println("Lütfen 1.sayıyı giriniz")
+    var sayi1= readLine()!!.toInt()
+    println("Lütfen 2.sayıyı giriniz")
+    var sayi2= readLine()!!.toInt()
+    when(secim){
+        1->{
+            result= sum(sayi1,sayi2)
+        }
+        2-> {
+            result= extraction(sayi1,sayi2)
+        }
+        3-> {
+            result= multiply(sayi1,sayi2)
+        }
+        4-> {
+            result= divide(sayi1,sayi2)
+        }
+        else-> println("Lütfen 1 ile 4 arası seçim yapınız.")
+    }
+    println("işleminizin sonucu : "+result)
+}
+fun sum(n1:Int,n2:Int):Int{
+    return n1+n2
 }
 
+fun extraction(n1:Int,n2:Int):Int{
+    return n1+n2
+}
+
+fun multiply(n1:Int,n2:Int):Int{
+    return n1+n2
+}
+
+fun divide(n1:Int,n2:Int):Int{
+    return n1+n2
+}
+
+*/
+
+    //Örnek 63: Klavyeden ardı ardına girilen sayıları toplayan ve girilen sayı negatif olduğunda duran programın algoritma ve
+    //akış diyagramını yazınız.
+
+
+    /*
+
+    var sayac=0
+    var toplam=0
+    while (true){
+        println("Lütfen sayı giriniz:")
+        var sayi= readLine()!!.toInt()
+        if (sayi<0){
+            println("ÇIKIŞ")
+            break
+        }
+        sayac+=1
+        toplam+=sayac
+    }
+    println("Girilen sayı adeti=$sayac ve toplamları =$toplam")
+
+    */
+
+    //Örnek 64: Klavyeden bir not girilmesini isteyen ve bu not 0-49 arasındaysa “Başarısız”, 50-64 arasındaysa “Orta”, 65-84
+    //arasındaysa “İyi”, 85-100 arasındaysa “Çok iyi “ Yazan programın algoritma ve akış diyagramını yazınız.
+
+/*
+    println("Lütfen not giriniz:")
+    var not= readLine()!!.toInt()
+    if (not>0 && not<=49){
+        println("BAŞARISIZ.")
+    }
+    else if (not>=50 && not<=64){
+        println("ORTA")
+    }
+    else if (not>=65 && not<=84){
+        println("İYİ")
+    }
+    else if (not>=85 && not<=100){
+        println("ÇOK İYİ")
+    }
+    else{
+        println("GEÇERLİ NOT GİR.")
+    }
+    */
+
+    //Örnek 65:  Klavyeden girilen iki tamsayıdan büyük olanı bulup ekrana yazdıran programın algoritma ve akış diyagramını
+    //yazınız.
+
+/*
+    var eb=0
+    println("Lütfen 1. sayı giriniz:")
+    var sayi1= readLine()!!.toInt()
+    if (sayi1>eb){
+        eb=sayi1
+    }
+    println("Lütfen 2. sayıyı giriniz:")
+    var sayi2= readLine()!!.toInt()
+    if (sayi2>eb){
+        eb=sayi2
+    }
+    println("En büyük sayı: $eb")
+
+*/
+
+    //Örnek 66: Klavyeden girilen iki pozitif tamsayıdan birincisinin ikincisi cinsinden kuvvetini alan programın algoritma ve
+    //akış diyagramını hazır fonksiyon kullanmadan yazınız.
+
+    //------------------------------------
+    //------------------------------------
+    //------------------------------------
+    //------------------------------------
+
+    //Örnek 67:  n! değerini hesaplayan programın algoritma ve akış diyagramını yazınız.
+
+
+    /*
+    var result=1
+    println("Lütfen bir sayı giriniz:")
+    var sayi= readLine()!!.toInt()
+    for (i in sayi downTo 1){
+        result*=i
+    }
+    println("$sayi sayısının faktöriyeli : $result 'tur.")
+    */
+
+    //Örnek 68:  1+4+9+ … +100= değerini hesaplayan programın algoritma ve akış diyagramını yazınız.
+
+/*
+    var i=1
+    var toplam=0
+    while (i<11){
+        var kare=i*i
+        i++
+        toplam+=kare
+    }
+    println("karelerin toplamı: " +toplam)
+    */
+
+    //Örnek 69:  Toplama, çıkarama, çarpma ve bölme işlemi yapan programın algoritma ve akış diyagramını yazınız.
+
+    /*
+    var result=0
+    println("LÜTFEN YAPMAK İSTEDİĞİNİZ SEÇİMİ TUŞLAYINIZ:")
+    println("1->TOPLAMA")
+    println("2->ÇIKARMA")
+    println("3->ÇARPMA")
+    println("4->BÖLME")
+    var secim= readLine()!!.toInt()
+    println("Lütfen 1.sayıyı giriniz")
+    var sayi1= readLine()!!.toInt()
+    println("Lütfen 2.sayıyı giriniz")
+    var sayi2= readLine()!!.toInt()
+    when(secim){
+        1->{
+            result= sum(sayi1,sayi2)
+        }
+        2-> {
+            result= extraction(sayi1,sayi2)
+        }
+        3-> {
+            result= multiply(sayi1,sayi2)
+        }
+        4-> {
+            result= divide(sayi1,sayi2)
+        }
+        else-> println("Lütfen 1 ile 4 arası seçim yapınız.")
+    }
+    println("işleminizin sonucu : "+result)
+}
+fun sum(n1:Int,n2:Int):Int{
+    return n1+n2
+}
+
+fun extraction(n1:Int,n2:Int):Int{
+    return n1+n2
+}
+
+fun multiply(n1:Int,n2:Int):Int{
+    return n1+n2
+}
+
+fun divide(n1:Int,n2:Int):Int{
+    return n1+n2
+}
+*/
+
+    //Örnek 70:  Saatte ortalama 60 km yol giden bir aracın, klavyeden girilen mesafeyi kaç saatte gideceğini hesaplayan
+    //programın algoritma ve akış diyagramını yazınız.
+
+    /*
+    var hiz=60
+    println("Lütfen aracın gideceği km bilgisini giriniz:")
+    var km= readLine()!!.toDouble()
+    var saat=(km/hiz).toDouble()
+    println("saatte $hiz km hız ile giden araç $km km yolu $saat saatte gider.")
+    */
+}
 
 
 

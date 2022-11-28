@@ -49,4 +49,22 @@ fun divide(n1:Int,n2:Int):Int{
     return n1+n2
 
     */
+
+    //Örnek: 3 lü datan tutan bişiy  yap
+
+   /*
+
+    val sayiKumesi= mutableListOf<Triple<Int?,String?,String?>>()
+    for (i in 1..3){
+        println("Lütfen bir sayı giriniz:")
+        val sayi= readLine()!!.toInt()
+        println("Adam ismi")
+        val isim= readLine().toString()
+        println("soyisim")
+        val soyisim= readLine().toString()
+        sayiKumesi.add(Triple(sayi,isim,soyisim))
+    }
+    println(sayiKumesi)
+
+    */
 }
